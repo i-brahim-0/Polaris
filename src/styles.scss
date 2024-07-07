@@ -20,6 +20,17 @@ a{
 }
 a:hover{
   font-size: 18px;
-  color: $fontaColor;
+  color: $secondFontColor;
   text-decoration: none;
+}
+
+.brdr{
+  height: 1px;
+  background-color: $borderColor;
+}
+.second-color{
+  color: $secondFontColor;
+}
+.hover:hover{
+  transform: scale(1.06);
 }

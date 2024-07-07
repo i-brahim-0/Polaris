@@ -1,1 +1,50 @@
-<p>products works!</p>
+<!-- <div class="row m-4">
+  <div class="col-md-2 col-sm-12" *ngFor="let product of products">
+    <div class="item">
+      <div>
+        <img [src]="product.image" [alt]="product.title" />
+        <div class="body">
+          <h3 class="">{{ product.title }}</h3>
+          <p>{{ product.description }}</p>
+        </div>
+      </div>
+      <div class="px-3 pb-2 d-flex justify-content-between align-items-center">
+        <button class="btn btn-success">Add to cart</button>
+        <span>{{ product.price }} L.E</span>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="row py-5">
+    <div class="col-md-4 d-flex align-items-center">
+      <div>
+        <div class="brdr w-25 mb-4"></div>
+        <h2>Choose what you like we are here</h2>
+        <p class="second-color my-4">welcome ya fandem</p>
+        <div class="brdr w-75 mt-4"></div>
+      </div>
+    </div>
+    <div *ngFor="let product of products" class="col-md-3">
+      <div class="body my-2">
+        <img class="w-100" [src]="product.image" [alt]="product.title" />
+        <h3
+          class="my-2 h6 text-center pt-1 bg-secondary px-2"
+          style="height: 30px"
+        >
+          {{ product.title | seeMore : 3 }}
+        </h3>
+        <div class="price text-center bg-danger">
+          <span>{{ product.price | currency : "EGP  " }}</span>
+        </div>
+        <div class="action text-center my-2">
+          <button class="btn btn-info mx-1 rounded-pill">
+            <i class="fa-solid fa-cart-plus"></i>
+            <a class="px-1">Add to Cart</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

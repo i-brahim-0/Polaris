@@ -18,7 +18,7 @@ export class NavbarComponent {
       }
     });
   }
-  logout() {
-    this._AuthService.currentUser.next(null);
+  isLogOut() {
+    this._AuthService.logout();
   }
 }

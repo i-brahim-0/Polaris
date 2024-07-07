@@ -12,6 +12,9 @@ import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SeeMorePipe } from './see-more.pipe';
+import { QuickViewComponent } from './quick-view/quick-view.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     AboutComponent,
     NotFoundComponent,
+    SeeMorePipe,
+    QuickViewComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     BrowserModule,

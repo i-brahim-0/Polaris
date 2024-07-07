@@ -23,6 +23,11 @@
         <a class="nav-link" routerLink="about">About</a>
       </li>
       <li class="nav-item">
+        <a *ngIf="isLogin" class="nav-link" routerLink="categories"
+          >Categories</a
+        >
+      </li>
+      <li class="nav-item">
         <a *ngIf="isLogin" class="nav-link" routerLink="products">Products</a>
       </li>
     </ul>
@@ -49,11 +54,7 @@
           <a *ngIf="!isLogin" class="nav-link" routerLink="register">Regiser</a>
         </li>
         <li class="nav-item">
-          <a
-            *ngIf="isLogin"
-            (click)="logout()"
-            routerLink="login"
-            class="nav-link"
+          <a *ngIf="isLogin" (click)="isLogOut()" routerLink="" class="nav-link"
             >Logout</a
           >
         </li>

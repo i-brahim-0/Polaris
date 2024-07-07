@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
   submitLoginForm(loginValue: FormGroup) {
     this._AuthService.login(loginValue.value).subscribe((response) => {
-      if (response !== undefined) {
+      if (response != undefined) {
         localStorage.setItem('userToken', response.token);
         this._AuthService.saveCurrentUser();
         this._Router.navigate(['/home']);
