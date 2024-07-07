@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-lg sticky-top">
-  <a class="navbar-brand" routerLink="products">Polaris</a>
+  <a class="navbar-brand" routerLinkActive="active" routerLink="products"
+    >Polaris</a
+  >
   <button
     class="navbar-toggler bg-light"
     type="button"
@@ -20,21 +22,46 @@
         <a
           *ngIf="isLogin"
           class="nav-link"
-          routerLinkActive=""
+          routerLinkActive="active"
           routerLink="home"
           >Home</a
         >
       </li>
       <li class="nav-item">
-        <a *ngIf="isLogin" class="nav-link" routerLink="products">Gallary</a>
-      </li>
-      <li class="nav-item">
-        <a *ngIf="isLogin" class="nav-link" routerLink="categories"
-          >Categories</a
+        <a
+          *ngIf="isLogin"
+          class="nav-link"
+          routerLinkActive="active"
+          routerLink="products"
+          >Gallary</a
         >
       </li>
+      <!-- start Dropdown list -->
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          routerLinkActive="active"
+        >
+          Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <!-- end Dropdown list  -->
       <li class="nav-item">
-        <a class="nav-link" routerLink="about">About</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="about"
+          >About</a
+        >
       </li>
     </ul>
     <div class="form-inline">
