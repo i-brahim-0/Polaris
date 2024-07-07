@@ -17,10 +17,16 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a *ngIf="isLogin" class="nav-link" routerLink="home">Home</a>
+        <a
+          *ngIf="isLogin"
+          class="nav-link"
+          routerLinkActive=""
+          routerLink="home"
+          >Home</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="about">About</a>
+        <a *ngIf="isLogin" class="nav-link" routerLink="products">Gallary</a>
       </li>
       <li class="nav-item">
         <a *ngIf="isLogin" class="nav-link" routerLink="categories"
@@ -28,7 +34,7 @@
         >
       </li>
       <li class="nav-item">
-        <a *ngIf="isLogin" class="nav-link" routerLink="products">Products</a>
+        <a class="nav-link" routerLink="about">About</a>
       </li>
     </ul>
     <div class="form-inline">
